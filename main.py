@@ -147,6 +147,11 @@ def delete_patientData(patient_id: str):
     
     del data[patient_id]
     save_data(data)
-    
-    return JSONResponse(status_code=201, content={'message': f"Patient with {patient_id} id, deleted."})
+
+    return JSONResponse(
+        status_code=200,
+        content={
+            'message': f"Patient with {patient_id} id, deleted."
+        }
+    )
 
