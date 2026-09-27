@@ -6,7 +6,7 @@ uvicorn backend.main:app \
     --port 8000 &
 
 echo "starting Streamlit frontend..."
-streamlit run app.py \
+streamlit run streamlit-app.py \
     --server.address=0.0.0.0 \
     --server.port=8501 \
     --server.headless=true
