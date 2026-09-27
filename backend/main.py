@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Query, HTTPException, Path
 from fastapi.responses import JSONResponse
-from models import Patient, PatientUpdate
-from utils import load_data, save_data
+from backend.models import Patient, PatientUpdate
+from backend.utils import load_data, save_data
 
 
 app = FastAPI()

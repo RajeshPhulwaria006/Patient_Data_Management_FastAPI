@@ -2,7 +2,7 @@ from pydantic import BaseModel, computed_field, Field
 from typing import Annotated, Literal, Optional
 
 class Patient(BaseModel):
-    
+    """Schema to validate patient's data"""
     id: Annotated[str,
         Field(...,
             description="Enter patient's id, should be unique among existing."
@@ -67,7 +67,7 @@ class Patient(BaseModel):
         
 
 class PatientUpdate(BaseModel):
-    
+    """Schema to validate patient's data for update"""
     name: Annotated[
         Optional[str],
         Field(default=None)
